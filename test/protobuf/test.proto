@@ -1,0 +1,5 @@
+syntax = "proto3";// 声明了protobuf版本
+ 
+package fixbug;// 声明了代码所在的包，对于C++是namespace
+
+message 
