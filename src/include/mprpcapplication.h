@@ -11,6 +11,8 @@ public:
     static void Init(int argc,char **argv);
     // 单例模式
     static MprpcApplication& GetInstance();
+
+    static MprpcConfig& GetConfig();
 private:
     MprpcApplication(){}
     MprpcApplication(const  MprpcApplication&) = delete;// 声明为delete，即虽然声明但是不能使用
