@@ -24,7 +24,7 @@ private:
     muduo::net::EventLoop m_eventLoop;
 
     struct ServiceInfo{
-        const google::protobuf::Service *m_service;// 保存服务对象
+        google::protobuf::Service *m_service;// 保存服务对象
         std::unordered_map<std::string,const google::protobuf::MethodDescriptor*>m_methodMap;//保存服务方法
     };
     
@@ -36,6 +36,10 @@ private:
     // 新的socket连接回调
     void OnConnection(const muduo::net::TcpConnectionPtr &conn);
 
-    // 读写以建立连接用户的读写事件回调
+    // 读写以建立连接用户的读写事件回调，如果远程有一个rpc服务的调用请求，那么OnMessage方法就会响应
     void OnMessage(const muduo::net::TcpConnectionPtr&,muduo::net::Buffer*,muduo::Timestamp);
+
+    // Closure的回调操作，用于序列化rpc的响应和网络发送
+    void SendRpcResponse(const muduo::net::TcpConnectionPtr&,google::protobuf::Message*);
+
 };

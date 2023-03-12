@@ -6,8 +6,18 @@
 },
 {
   "directory": "/home/xuanxuan/code/mprpc/build/src",
+  "command": "/usr/bin/g++  -I/home/xuanxuan/code/mprpc/src/include -I/home/xuanxuan/code/mprpc/example -g -o CMakeFiles/mprpc.dir/mprpcchannel.cc.o -c /home/xuanxuan/code/mprpc/src/mprpcchannel.cc",
+  "file": "/home/xuanxuan/code/mprpc/src/mprpcchannel.cc"
+},
+{
+  "directory": "/home/xuanxuan/code/mprpc/build/src",
   "command": "/usr/bin/g++  -I/home/xuanxuan/code/mprpc/src/include -I/home/xuanxuan/code/mprpc/example -g -o CMakeFiles/mprpc.dir/mprpcconfig.cc.o -c /home/xuanxuan/code/mprpc/src/mprpcconfig.cc",
   "file": "/home/xuanxuan/code/mprpc/src/mprpcconfig.cc"
+},
+{
+  "directory": "/home/xuanxuan/code/mprpc/build/src",
+  "command": "/usr/bin/g++  -I/home/xuanxuan/code/mprpc/src/include -I/home/xuanxuan/code/mprpc/example -g -o CMakeFiles/mprpc.dir/rpcheader.pb.cc.o -c /home/xuanxuan/code/mprpc/src/rpcheader.pb.cc",
+  "file": "/home/xuanxuan/code/mprpc/src/rpcheader.pb.cc"
 },
 {
   "directory": "/home/xuanxuan/code/mprpc/build/src",
