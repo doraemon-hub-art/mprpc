@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "../user.pb.h"
+#include "user.pb.h"
 #include "mprpcapplication.h"
 #include "rpcprovider.h"
 
@@ -47,8 +47,28 @@ public:
 
     bool Register(uint32_t id,std::string name,std::string pwd){
         std::cout<<"doing local service: Register"<<std::endl;
-        std::cout<<"id: "<<id<< "name: "<<name <<"pwd: "<<pwd<<std::endl;
+        std::cout<<"id: "<<id<< "name: "<<name <<" pwd: "<<pwd<<std::endl;
         return true;
+    }
+
+    void Register(::google::protobuf::RpcController* controller,
+                       const ::fixbug::RegisterRequest* request,
+                       ::fixbug::RegisterResponse* response,
+                       ::google::protobuf::Closure* done){
+        // 框架已经从网络上接收到数据，并将其反序列化成request对象
+        // 获取请求数据
+        uint32_t id = request->id();
+        std::string name = request->name();
+        std::string pwd = request->pwd();
+
+        bool ret = Register(id,name,pwd);
+
+        response->mutable_result()->set_errcode(0);
+        response->mutable_result()->set_errmsg("");
+        response->set_success(ret);
+
+        done->Run();
+
     }
 
 };
@@ -63,5 +83,6 @@ int main(int argc,char **argv){
 
     // 启动 一个rpc服务发布节点，Run以后，进程进入阻塞状态，等待远程rpc调用请求
     provider.Run();
+    
     return 0;
 }

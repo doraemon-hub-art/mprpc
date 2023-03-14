@@ -36,5 +36,5 @@ message RegisterResponse{
 
 service UserServiceRpc{
     rpc Login(LoginRequest) returns(LoginResponse);
-    rpc Register(RegisterRequest) returns(LoginResponse);
+    rpc Register(RegisterRequest) returns(RegisterResponse);
 }

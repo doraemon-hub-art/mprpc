@@ -310,4 +310,5 @@ src/CMakeFiles/mprpc.dir/mprpcchannel.cc.o: \
  /usr/include/arpa/inet.h /usr/include/netinet/in.h \
  /usr/include/x86_64-linux-gnu/bits/in.h \
  /home/xuanxuan/code/mprpc/src/include/mprpcapplication.h \
- /home/xuanxuan/code/mprpc/src/include/mprpcconfig.h
+ /home/xuanxuan/code/mprpc/src/include/mprpcconfig.h \
+ /home/xuanxuan/code/mprpc/src/include/mprpccontroller.h

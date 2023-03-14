@@ -29,7 +29,9 @@ void MprpcChannel::CallMethod(const google::protobuf::MethodDescriptor *method,
     if(request->SerializePartialToString(&args_str)){
         args_size = args_str.size();
     }else{
-        std::cout<<"serialize request error!"<<std::endl;
+        //std::cout<<"serialize request error!"<<std::endl;
+        // 实现controller之后，就可以在return出错的时候收集错误信息
+        controller->SetFailed("serialize request error!");// 失败
         return ;
     }
 
@@ -44,7 +46,8 @@ void MprpcChannel::CallMethod(const google::protobuf::MethodDescriptor *method,
     if(rpcheader.SerializePartialToString(&rpc_header_str)){
         header_size = rpc_header_str.size();
     }else{
-        std::cout<<"serialize rpc header error!"<<std::endl;
+        //std::cout<<"serialize rpc header error!"<<std::endl;
+        controller->SetFailed("serialize rpc header error!");// 失败
         return ;
     }
 
@@ -63,8 +66,12 @@ void MprpcChannel::CallMethod(const google::protobuf::MethodDescriptor *method,
 
     int client_fd = socket(AF_INET,SOCK_STREAM,0);// 可以定义一个智能指针，自定义它的删除器
     if(client_fd == -1){
-        std::cout << "create socket error! errno: "<<errno<<std::endl;
-        exit(EXIT_FAILURE);
+        //std::cout << "create socket error! errno: "<<errno<<std::endl;
+        //exit(EXIT_FAILURE);
+        char err_buf[512] = {0};
+        sprintf(err_buf,"create socket error! errno: %d",errno);
+        controller->SetFailed(err_buf);// 失败
+        return ;
     }
     
 
@@ -81,15 +88,22 @@ void MprpcChannel::CallMethod(const google::protobuf::MethodDescriptor *method,
     // 目前是直连状态，后期将会使用zookeeper找到所在结点
     if(connect(client_fd,(struct sockaddr*)&server_addr,sizeof(server_addr)) == -1){
         // 连接失败
-        std::cout << "connect error! errno: "<<errno<<std::endl;   
+        //std::cout << "connect error! errno: "<<errno<<std::endl;   
         close(client_fd);
-        exit(EXIT_FAILURE);
+        char err_buf[512] = {0};
+        sprintf(err_buf,"connect error! errno: %d",errno);
+        controller->SetFailed(err_buf);// 失败
+        //exit(EXIT_FAILURE);
+        return ;
     }
 
     // 发送RPC请求
     if(send(client_fd,send_rpc_str.c_str(),send_rpc_str.size(),0) == -1){
-        std::cout << "send error! errno: "<<errno << std::endl;
+        //std::cout << "send error! errno: "<<errno << std::endl;
         close(client_fd);
+        char err_buf[512] = {0};
+        sprintf(err_buf,"send error! errno: %d",errno);
+        controller->SetFailed(err_buf);// 失败
         return ;
     }
 
@@ -97,8 +111,11 @@ void MprpcChannel::CallMethod(const google::protobuf::MethodDescriptor *method,
     char recv_buf[1024] = {0};
     int recv_size = 0;
     if((recv_size = recv(client_fd,recv_buf,1024,0)) == -1){
-        std::cout << "recv error! errno: "<<errno << std::endl;
+        //std::cout << "recv error! errno: "<<errno << std::endl;
         close(client_fd);
+        char err_buf[512] = {0};
+        sprintf(err_buf,"recv error! errno: %d",errno);
+        controller->SetFailed(err_buf);// 失败
         return ;
     }
 
@@ -109,6 +126,10 @@ void MprpcChannel::CallMethod(const google::protobuf::MethodDescriptor *method,
     if(!response->ParseFromArray(recv_buf,recv_size)){
         //std::cout<<"parse error! response_str:"<<response_str << std::endl;
         close(client_fd);
+        char err_buf[2048] = {0};
+        sprintf(err_buf,"parse error! response_str: %s",recv_buf);
         return ;
     }
+    // 无论是否出错，都要将socket fd关闭
+    close(client_fd);
 }

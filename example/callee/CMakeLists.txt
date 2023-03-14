@@ -1,5 +1,6 @@
 # 设置头文件搜索路径
-set(SRC_LIST userservice.cc ../user.pb.cc)
+# set(SRC_LIST userservice.cc ../user.pb.cc) 
+set(SRC_LIST friendservice.cc ../friend.pb.cc)
 # 生成可执行文件
 add_executable(provider ${SRC_LIST})
 # 链接动态库

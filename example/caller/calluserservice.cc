@@ -30,5 +30,19 @@ int main(int argc,char **argv){
         std::cout<<"rpc login response error :"<<response.result().errmsg()<<std::endl;
     }
     
+    // 调用rpc方法 Register
+    fixbug::RegisterRequest req;
+    req.set_id(20061128);
+    req.set_name("zyx");
+    req.set_pwd("123");
+    fixbug::RegisterResponse rsp;
+    stub.Register(nullptr,&req,&rsp,nullptr);
+
+    // 以同步的方式发起rpc请求，等待返回结果
+    if(rsp.result().errcode() == 0){
+        std::cout << "rpc register response success! "<<rsp.success()<<std::endl;
+    }else{
+        std::cout << "rpc register response failed! "<<rsp.result().errmsg()<<std::endl;
+    }
     return 0;
 }
