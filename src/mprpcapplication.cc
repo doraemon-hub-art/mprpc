@@ -36,8 +36,8 @@ void MprpcApplication::Init(int argc,char **argv){
     m_config.LoadConfigFile(config_file.c_str());
 
     // test
-    std::string str = "rpcserverip";
-    std::cout<<m_config.Load(str) <<std::endl;
+    std::string rpcserverip = "rpcserverip";
+    std::cout<<m_config.Load(rpcserverip) <<std::endl;
 }
 
 MprpcApplication& MprpcApplication::GetInstance(){

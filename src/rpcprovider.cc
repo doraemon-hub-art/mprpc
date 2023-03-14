@@ -43,7 +43,7 @@ void RpcProvider::Run(){
 
     std::string rsip = "rpcserverip";
     std::string scpt = "rpcserverport";
-    std::cout<<MprpcApplication::GetConfig().Load(scpt)<<std::endl;
+    //std::cout<<MprpcApplication::GetConfig().Load(scpt)<<std::endl;
     std::string ip = MprpcApplication::GetConfig().Load(rsip);
     uint16_t port = atoi(MprpcApplication::GetConfig().Load(scpt).c_str());
 

@@ -20,6 +20,21 @@ message LoginResponse{
 
 }
 
+// 要发布一个方法，需要让rpc的调用方看到你是怎么描述这个方法的
+// 包括方法名，参数类型，响应类类型，即在Proto文件中定义
+
+message RegisterRequest{
+    uint32 id = 1;
+    bytes name = 2;
+    bytes pwd = 3;
+}
+
+message RegisterResponse{
+    ResultCode result = 1;
+    bool success = 2;
+}
+
 service UserServiceRpc{
     rpc Login(LoginRequest) returns(LoginResponse);
+    rpc Register(RegisterRequest) returns(LoginResponse);
 }

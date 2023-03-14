@@ -43,7 +43,12 @@ public:
         // 执行回调操作
         // 执行响应对象数据的序列化和网络发送，都是由框架来完成的
         done->Run();
- 
+    }
+
+    bool Register(uint32_t id,std::string name,std::string pwd){
+        std::cout<<"doing local service: Register"<<std::endl;
+        std::cout<<"id: "<<id<< "name: "<<name <<"pwd: "<<pwd<<std::endl;
+        return true;
     }
 
 };

@@ -33,5 +33,15 @@
   "directory": "/home/xuanxuan/code/mprpc/build/example/callee",
   "command": "/usr/bin/g++  -I/home/xuanxuan/code/mprpc/src/include -I/home/xuanxuan/code/mprpc/example -g -o CMakeFiles/provider.dir/__/user.pb.cc.o -c /home/xuanxuan/code/mprpc/example/user.pb.cc",
   "file": "/home/xuanxuan/code/mprpc/example/user.pb.cc"
+},
+{
+  "directory": "/home/xuanxuan/code/mprpc/build/example/caller",
+  "command": "/usr/bin/g++  -I/home/xuanxuan/code/mprpc/src/include -I/home/xuanxuan/code/mprpc/example -g -o CMakeFiles/consumer.dir/calluserservice.cc.o -c /home/xuanxuan/code/mprpc/example/caller/calluserservice.cc",
+  "file": "/home/xuanxuan/code/mprpc/example/caller/calluserservice.cc"
+},
+{
+  "directory": "/home/xuanxuan/code/mprpc/build/example/caller",
+  "command": "/usr/bin/g++  -I/home/xuanxuan/code/mprpc/src/include -I/home/xuanxuan/code/mprpc/example -g -o CMakeFiles/consumer.dir/__/user.pb.cc.o -c /home/xuanxuan/code/mprpc/example/user.pb.cc",
+  "file": "/home/xuanxuan/code/mprpc/example/user.pb.cc"
 }
 ]

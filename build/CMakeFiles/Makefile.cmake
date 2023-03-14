@@ -13,6 +13,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.25.1/CMakeSystem.cmake"
   "/home/xuanxuan/code/mprpc/example/CMakeLists.txt"
   "/home/xuanxuan/code/mprpc/example/callee/CMakeLists.txt"
+  "/home/xuanxuan/code/mprpc/example/caller/CMakeLists.txt"
   "/home/xuanxuan/code/mprpc/src/CMakeLists.txt"
   "/usr/local/share/cmake-3.25/Modules/CMakeCInformation.cmake"
   "/usr/local/share/cmake-3.25/Modules/CMakeCXXInformation.cmake"
@@ -45,10 +46,12 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "src/CMakeFiles/CMakeDirectoryInformation.cmake"
   "example/CMakeFiles/CMakeDirectoryInformation.cmake"
   "example/callee/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "example/caller/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "src/CMakeFiles/mprpc.dir/DependInfo.cmake"
   "example/callee/CMakeFiles/provider.dir/DependInfo.cmake"
+  "example/caller/CMakeFiles/consumer.dir/DependInfo.cmake"
   )

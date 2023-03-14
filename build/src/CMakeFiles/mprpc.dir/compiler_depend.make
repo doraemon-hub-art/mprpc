@@ -542,7 +542,38 @@ src/CMakeFiles/mprpc.dir/mprpcchannel.cc.o: /home/xuanxuan/code/mprpc/src/mprpcc
   /usr/local/include/google/protobuf/parse_context.h \
   /usr/local/include/google/protobuf/io/zero_copy_stream.h \
   /usr/local/include/google/protobuf/io/zero_copy_stream_impl_lite.h \
-  /usr/local/include/google/protobuf/stubs/stl_util.h
+  /usr/local/include/google/protobuf/stubs/stl_util.h \
+  /home/xuanxuan/code/mprpc/src/include/rpcheader.pb.h \
+  /usr/local/include/google/protobuf/generated_message_table_driven.h \
+  /usr/local/include/google/protobuf/map.h \
+  /usr/local/include/google/protobuf/map_type_handler.h \
+  /usr/local/include/google/protobuf/map_entry_lite.h \
+  /usr/local/include/google/protobuf/map_field_lite.h \
+  /usr/local/include/google/protobuf/inlined_string_field.h \
+  /usr/local/include/google/protobuf/extension_set.h \
+  /usr/include/c++/11/cassert \
+  /usr/include/x86_64-linux-gnu/sys/socket.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
+  /usr/include/x86_64-linux-gnu/bits/socket.h \
+  /usr/include/x86_64-linux-gnu/bits/socket_type.h \
+  /usr/include/x86_64-linux-gnu/bits/sockaddr.h \
+  /usr/include/x86_64-linux-gnu/asm/socket.h \
+  /usr/include/asm-generic/socket.h \
+  /usr/include/linux/posix_types.h \
+  /usr/include/linux/stddef.h \
+  /usr/include/x86_64-linux-gnu/asm/posix_types.h \
+  /usr/include/x86_64-linux-gnu/asm/posix_types_64.h \
+  /usr/include/asm-generic/posix_types.h \
+  /usr/include/x86_64-linux-gnu/asm/bitsperlong.h \
+  /usr/include/asm-generic/bitsperlong.h \
+  /usr/include/x86_64-linux-gnu/asm/sockios.h \
+  /usr/include/asm-generic/sockios.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_osockaddr.h \
+  /usr/include/arpa/inet.h \
+  /usr/include/netinet/in.h \
+  /usr/include/x86_64-linux-gnu/bits/in.h \
+  /home/xuanxuan/code/mprpc/src/include/mprpcapplication.h \
+  /home/xuanxuan/code/mprpc/src/include/mprpcconfig.h
 
 src/CMakeFiles/mprpc.dir/mprpcconfig.cc.o: /home/xuanxuan/code/mprpc/src/mprpcconfig.cc \
   /usr/include/stdc-predef.h \
@@ -1559,20 +1590,6 @@ src/CMakeFiles/mprpc.dir/rpcprovider.cc.o: /home/xuanxuan/code/mprpc/src/rpcprov
 
 /usr/local/include/boost/type_index/type_index_facade.hpp:
 
-/usr/include/asm-generic/sockios.h:
-
-/usr/include/asm-generic/posix_types.h:
-
-/usr/include/x86_64-linux-gnu/asm/posix_types.h:
-
-/usr/include/linux/posix_types.h:
-
-/usr/include/x86_64-linux-gnu/bits/sockaddr.h:
-
-/usr/include/x86_64-linux-gnu/bits/socket.h:
-
-/usr/include/netinet/in.h:
-
 /usr/include/muduo/net/InetAddress.h:
 
 /usr/local/include/boost/type_index.hpp:
@@ -1609,6 +1626,26 @@ src/CMakeFiles/mprpc.dir/rpcprovider.cc.o: /home/xuanxuan/code/mprpc/src/rpcprov
 
 /home/xuanxuan/code/mprpc/src/rpcprovider.cc:
 
+/home/xuanxuan/code/mprpc/src/rpcheader.pb.cc:
+
+/home/xuanxuan/code/mprpc/src/mprpcconfig.cc:
+
+/usr/include/netinet/in.h:
+
+/usr/include/arpa/inet.h:
+
+/usr/include/asm-generic/sockios.h:
+
+/usr/include/asm-generic/posix_types.h:
+
+/usr/include/x86_64-linux-gnu/asm/posix_types.h:
+
+/usr/include/linux/posix_types.h:
+
+/usr/include/x86_64-linux-gnu/bits/sockaddr.h:
+
+/usr/include/x86_64-linux-gnu/bits/socket.h:
+
 /usr/include/c++/11/cassert:
 
 /usr/local/include/google/protobuf/extension_set.h:
@@ -1618,10 +1655,6 @@ src/CMakeFiles/mprpc.dir/rpcprovider.cc.o: /home/xuanxuan/code/mprpc/src/rpcprov
 /usr/local/include/google/protobuf/map.h:
 
 /usr/local/include/google/protobuf/generated_message_table_driven.h:
-
-/home/xuanxuan/code/mprpc/src/rpcheader.pb.cc:
-
-/home/xuanxuan/code/mprpc/src/mprpcconfig.cc:
 
 /usr/local/include/google/protobuf/stubs/stl_util.h:
 
@@ -1889,15 +1922,15 @@ src/CMakeFiles/mprpc.dir/rpcprovider.cc.o: /home/xuanxuan/code/mprpc/src/rpcprov
 
 /usr/include/x86_64-linux-gnu/bits/timex.h:
 
-/usr/include/asm-generic/socket.h:
-
 /usr/local/include/google/protobuf/reflection_ops.h:
+
+/usr/include/asm-generic/socket.h:
 
 /usr/include/c++/11/bits/invoke.h:
 
-/usr/include/x86_64-linux-gnu/bits/in.h:
-
 /usr/local/include/google/protobuf/wire_format.h:
+
+/usr/include/x86_64-linux-gnu/bits/in.h:
 
 /usr/include/c++/11/bits/postypes.h:
 
