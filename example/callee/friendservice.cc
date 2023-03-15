@@ -6,6 +6,7 @@
 #include "mprpcapplication.h"       
 #include "friend.pb.h"
 #include "rpcprovider.h"
+#include "logger.h"
 
 class FriendService:public fixbug::FriendServiceRpc{ 
         
@@ -41,6 +42,9 @@ public:
 
 int main(int argc,char** argv){
 
+    //LOG_INFO("first log message!");
+    LOG_ERROR("%s:%s:%d",__FILE__,__FUNCTION__,__LINE__);
+    LOG_ERROR("xiao ke lai");
     // 框架初始化
     MprpcApplication::Init(argc,argv);
 
@@ -48,5 +52,5 @@ int main(int argc,char** argv){
     provider.NotifyService(new FriendService());
     provider.Run();
 
-    return 0;
+    return 0;   
 }

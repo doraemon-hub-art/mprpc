@@ -1,0 +1,10 @@
+2023-03-15 17:51:04 [ERROR] =>: /home/xuanxuan/code/mprpc/example/callee/friendservice.cc:main:46
+2023-03-15 17:51:04 [ERROR] =>: xiao ke lai
+2023-03-15 17:51:04 [INFO] =>: service_name: FriendServiceRpc
+2023-03-15 17:51:04 [INFO] =>: method_name: GetFriendsList
+2023-03-15 17:51:09 [INFO] =>: ========rpc request info========
+2023-03-15 17:51:09 [INFO] =>: header_size: 36
+2023-03-15 17:51:09 [INFO] =>: service_name: FriendServiceRpc
+2023-03-15 17:51:09 [INFO] =>: method_name: GetFriendsList
+2023-03-15 17:51:09 [INFO] =>: args_str: È·È	
+2023-03-15 17:51:09 [INFO] =>: ==============end===============

@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/home/xuanxuan/code/mprpc/src/include -I/home/xuanxuan/code/mprpc/example
 
-CXX_FLAGS = -g
+CXX_FLAGS = -g -std=gnu++17
 

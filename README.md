@@ -10,6 +10,7 @@
 - CMakeLists.txt: 顶层的cmake文件
 - README.md: 项目自述文件
 - autobuild.sh: 编译脚本
+- log: 存储日志文件
 
 ## 项目相关库配置
 - cmake
