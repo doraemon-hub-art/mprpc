@@ -14,7 +14,9 @@
 
 ## 项目相关库配置
 - cmake
-- boost
 - muduo
+    - boost
 - protobuf
+- zookeeper
+    - openjdk   
 

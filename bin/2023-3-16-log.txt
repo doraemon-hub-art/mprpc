@@ -1,0 +1,30 @@
+2023-03-16 18:39:27 [ERROR] =>: /home/xuanxuan/code/mprpc/example/callee/friendservice.cc:main:46
+2023-03-16 18:39:27 [ERROR] =>: xiao ke lai
+2023-03-16 18:39:27 [INFO] =>: service_name: FriendServiceRpc
+2023-03-16 18:39:27 [INFO] =>: method_name: GetFriendsList
+2023-03-16 18:56:16 [ERROR] =>: /home/xuanxuan/code/mprpc/example/callee/friendservice.cc:main:46
+2023-03-16 18:56:16 [ERROR] =>: xiao ke lai
+2023-03-16 18:56:16 [INFO] =>: service_name: FriendServiceRpc
+2023-03-16 18:56:16 [INFO] =>: method_name: GetFriendsList
+2023-03-16 19:05:09 [ERROR] =>: /home/xuanxuan/code/mprpc/example/callee/friendservice.cc:main:46
+2023-03-16 19:05:09 [ERROR] =>: xiao ke lai
+2023-03-16 19:05:09 [INFO] =>: service_name: FriendServiceRpc
+2023-03-16 19:05:09 [INFO] =>: method_name: GetFriendsList
+2023-03-16 19:05:38 [INFO] =>: ========rpc request info========
+2023-03-16 19:05:38 [INFO] =>: header_size: 36
+2023-03-16 19:05:38 [INFO] =>: service_name: FriendServiceRpc
+2023-03-16 19:05:38 [INFO] =>: method_name: GetFriendsList
+2023-03-16 19:05:38 [INFO] =>: args_str: È·È	
+2023-03-16 19:05:38 [INFO] =>: ==============end===============
+2023-03-16 19:05:49 [INFO] =>: ========rpc request info========
+2023-03-16 19:05:49 [INFO] =>: header_size: 36
+2023-03-16 19:05:49 [INFO] =>: service_name: FriendServiceRpc
+2023-03-16 19:05:49 [INFO] =>: method_name: GetFriendsList
+2023-03-16 19:05:49 [INFO] =>: args_str: È·È	
+2023-03-16 19:05:49 [INFO] =>: ==============end===============
+2023-03-16 19:05:56 [INFO] =>: ========rpc request info========
+2023-03-16 19:05:56 [INFO] =>: header_size: 36
+2023-03-16 19:05:56 [INFO] =>: service_name: FriendServiceRpc
+2023-03-16 19:05:56 [INFO] =>: method_name: GetFriendsList
+2023-03-16 19:05:56 [INFO] =>: args_str: È·È	
+2023-03-16 19:05:56 [INFO] =>: ==============end===============

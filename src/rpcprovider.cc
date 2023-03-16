@@ -4,6 +4,7 @@
 #include <google/protobuf/descriptor.h>
 #include "rpcheader.pb.h"
 #include "logger.h"
+#include "zookeeperutil.h"
 
 /*
 
@@ -63,9 +64,29 @@ void RpcProvider::Run(){
     // 设置muduo库的线程数量
     server.setThreadNum(4);
 
-    // 显示信息
-    
+    // 把当前rpc节点要发布的服务全部注册到zk上面，让rpc client可以从zk上发现服务
+    // session timeout 30s zkclient 网络IO线程，1/3timeout时间发送心跳
+    ZkClient zkCli;
+    zkCli.Start();// 连接zkServer
 
+    
+    // service_name设置为永久性节点，method_name为临时性节点
+    for(auto & sp : m_serviceMap){// 服务名字
+        std::string service_path = "/" + sp.first;
+        zkCli.Create(service_path.c_str(),nullptr,0);// 创建父节点
+
+        for(auto & mp : sp.second.m_methodMap){// 方法名字
+
+            // 存储当前这个rpc服务节点主机的ip和port
+            std::string method_path = service_path + "/" + mp.first;
+            char method_path_data[128] = {0};
+            sprintf(method_path_data,"%s:%d",ip.c_str(),port);
+            zkCli.Create(method_path.c_str(),method_path_data,strlen(method_path_data),ZOO_EPHEMERAL);
+        }
+    }
+
+    // RPC服务端准备启动，打印信息
+    std::cout <<"RpcProvider start service at ip : "<<ip <<" port :"<<port<<std::endl;
     // 启动网络服务
     server.start();
 
