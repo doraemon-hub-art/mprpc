@@ -1,0 +1,12 @@
+2023-03-27 11:47:01 [INFO] =>: service_name: Factorial_ServiceRpc
+2023-03-27 11:47:01 [INFO] =>: method_name: Factorial_Use
+2023-03-27 16:23:44 [INFO] =>: service_name: Factorial_ServiceRpc
+2023-03-27 16:23:44 [INFO] =>: method_name: Factorial_Use
+2023-03-27 16:35:29 [INFO] =>: service_name: Factorial_ServiceRpc
+2023-03-27 16:35:29 [INFO] =>: method_name: Factorial_Use
+2023-03-27 16:35:35 [INFO] =>: ========rpc request info========
+2023-03-27 16:35:35 [INFO] =>: header_size: 39
+2023-03-27 16:35:35 [INFO] =>: service_name: Factorial_ServiceRpc
+2023-03-27 16:35:35 [INFO] =>: method_name: Factorial_Use
+2023-03-27 16:35:35 [INFO] =>: args_str: 
+2023-03-27 16:35:35 [INFO] =>: ==============end===============

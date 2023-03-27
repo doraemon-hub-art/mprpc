@@ -1,0 +1,3 @@
+/home/xuanxuan/code/mprpc_test/Standalone_example/caller/build/CMakeFiles/mprpc_consumer_example.dir
+/home/xuanxuan/code/mprpc_test/Standalone_example/caller/build/CMakeFiles/edit_cache.dir
+/home/xuanxuan/code/mprpc_test/Standalone_example/caller/build/CMakeFiles/rebuild_cache.dir

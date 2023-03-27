@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package fixbug;
+
+// C++编译选项
+option cc_generic_services = true;
+
+message ResultCode{
+    int32 errcode = 1;
+    bytes errmsg = 2;
+}
+
+message Factorial_Request{
+    int32 num = 2;
+}
+
+message Factorial_Response{
+    ResultCode result = 1;
+    //bool success = 2;
+    int32 value = 2; 
+}
+
+// 要发布一个方法，需要让rpc的调用方看到你是怎么描述这个方法的
+// 包括方法名，参数类型，响应类类型，即在Proto文件中定义
+service Factorial_ServiceRpc{
+    // 请求 & 响应
+    rpc Factorial_Use(Factorial_Request) returns(Factorial_Response);
+}

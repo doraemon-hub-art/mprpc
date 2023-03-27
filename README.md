@@ -2,12 +2,15 @@
 
 ## 项目结构
 
-- bin： 可执行文件
+- bin： 可执行文件 & 日志文件
 - build: 项目编译文件
+- example: 使用示例(未脱离框架代码)
+- lib: 框架静态库输出目录
 - src：源代码
-- test: 测试代码
+- standalone_example: 独立测试，完整的RPC调用方 & 提供方测试。
+- test: 测试代码(无用)
 - example: 框架代码使用范例
-- CMakeLists.txt: 顶层的cmake文件
+- CMakeLists.txt: 框架顶层的CMake文件
 - README.md: 项目自述文件
 - autobuild.sh: 编译脚本
 
@@ -16,16 +19,16 @@
 ## 框架使用
 ### 环境配置
 > 项目依赖
-- cmake
-- protubuf
-- muduo
-    - muduo依赖boost
-- zookeeper
-    - zookeeper依赖openjdk
+- CMake
+- Protubuf
+- Muduo
+    - 同时安装其依赖boost库
+- Zookeeper
+    - 同时安装其依赖openjdk
 - 拿到lib目录生成的头文件include和库文件libmprpc.a
-
+***
 ### RPC服务发布者
-
+> 注： 以下代码为standalone_example中的示例代码
 > 先编写对应的protoc文件,这里我们叫做test.proto
 
 - 根据你的需要，定义要发布的方法以及其相关参数的proto文件
@@ -158,7 +161,7 @@ target_link_libraries(mprpc_provider_example
 # 将生成的可执行文件放到 bin 目录下
 set(EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/../bin)
 ```
-
+***
 ### RPC服务器调用者
 > 开始编写RPC的调用方,这里我们叫做consumer_test.cc
 
@@ -203,12 +206,15 @@ int main(int argc,char **argv){
     return 0;
 }
 ```
-
+***
 ### 编译 & 运行
 > 成功返回结果。
 
 ```bash
 Rpc Factorial_Use response success!
 24
-
 ```
+***
+
+## 压力测试
+
