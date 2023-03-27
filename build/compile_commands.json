@@ -1,0 +1,62 @@
+[
+{
+  "directory": "/home/xuanxuan/code/mprpc/build/src",
+  "command": "/usr/bin/g++ -Dmprpc_EXPORTS -I/home/xuanxuan/code/mprpc/src/include -I/home/xuanxuan/code/mprpc/example -g -fPIC -std=gnu++17 -o CMakeFiles/mprpc.dir/mprpcapplication.cc.o -c /home/xuanxuan/code/mprpc/src/mprpcapplication.cc",
+  "file": "/home/xuanxuan/code/mprpc/src/mprpcapplication.cc"
+},
+{
+  "directory": "/home/xuanxuan/code/mprpc/build/src",
+  "command": "/usr/bin/g++ -Dmprpc_EXPORTS -I/home/xuanxuan/code/mprpc/src/include -I/home/xuanxuan/code/mprpc/example -g -fPIC -std=gnu++17 -o CMakeFiles/mprpc.dir/mprpcconfig.cc.o -c /home/xuanxuan/code/mprpc/src/mprpcconfig.cc",
+  "file": "/home/xuanxuan/code/mprpc/src/mprpcconfig.cc"
+},
+{
+  "directory": "/home/xuanxuan/code/mprpc/build/src",
+  "command": "/usr/bin/g++ -Dmprpc_EXPORTS -I/home/xuanxuan/code/mprpc/src/include -I/home/xuanxuan/code/mprpc/example -g -fPIC -std=gnu++17 -o CMakeFiles/mprpc.dir/rpcheader.pb.cc.o -c /home/xuanxuan/code/mprpc/src/rpcheader.pb.cc",
+  "file": "/home/xuanxuan/code/mprpc/src/rpcheader.pb.cc"
+},
+{
+  "directory": "/home/xuanxuan/code/mprpc/build/src",
+  "command": "/usr/bin/g++ -Dmprpc_EXPORTS -I/home/xuanxuan/code/mprpc/src/include -I/home/xuanxuan/code/mprpc/example -g -fPIC -std=gnu++17 -o CMakeFiles/mprpc.dir/rpcprovider.cc.o -c /home/xuanxuan/code/mprpc/src/rpcprovider.cc",
+  "file": "/home/xuanxuan/code/mprpc/src/rpcprovider.cc"
+},
+{
+  "directory": "/home/xuanxuan/code/mprpc/build/src",
+  "command": "/usr/bin/g++ -Dmprpc_EXPORTS -I/home/xuanxuan/code/mprpc/src/include -I/home/xuanxuan/code/mprpc/example -g -fPIC -std=gnu++17 -o CMakeFiles/mprpc.dir/mprpcchannel.cc.o -c /home/xuanxuan/code/mprpc/src/mprpcchannel.cc",
+  "file": "/home/xuanxuan/code/mprpc/src/mprpcchannel.cc"
+},
+{
+  "directory": "/home/xuanxuan/code/mprpc/build/src",
+  "command": "/usr/bin/g++ -Dmprpc_EXPORTS -I/home/xuanxuan/code/mprpc/src/include -I/home/xuanxuan/code/mprpc/example -g -fPIC -std=gnu++17 -o CMakeFiles/mprpc.dir/mprpccontroller.cc.o -c /home/xuanxuan/code/mprpc/src/mprpccontroller.cc",
+  "file": "/home/xuanxuan/code/mprpc/src/mprpccontroller.cc"
+},
+{
+  "directory": "/home/xuanxuan/code/mprpc/build/src",
+  "command": "/usr/bin/g++ -Dmprpc_EXPORTS -I/home/xuanxuan/code/mprpc/src/include -I/home/xuanxuan/code/mprpc/example -g -fPIC -std=gnu++17 -o CMakeFiles/mprpc.dir/logger.cc.o -c /home/xuanxuan/code/mprpc/src/logger.cc",
+  "file": "/home/xuanxuan/code/mprpc/src/logger.cc"
+},
+{
+  "directory": "/home/xuanxuan/code/mprpc/build/src",
+  "command": "/usr/bin/g++ -Dmprpc_EXPORTS -I/home/xuanxuan/code/mprpc/src/include -I/home/xuanxuan/code/mprpc/example -g -fPIC -std=gnu++17 -o CMakeFiles/mprpc.dir/zookeeperutil.cc.o -c /home/xuanxuan/code/mprpc/src/zookeeperutil.cc",
+  "file": "/home/xuanxuan/code/mprpc/src/zookeeperutil.cc"
+},
+{
+  "directory": "/home/xuanxuan/code/mprpc/build/example/callee",
+  "command": "/usr/bin/g++  -I/home/xuanxuan/code/mprpc/src/include -I/home/xuanxuan/code/mprpc/example -g -std=gnu++17 -o CMakeFiles/provider.dir/friendservice.cc.o -c /home/xuanxuan/code/mprpc/example/callee/friendservice.cc",
+  "file": "/home/xuanxuan/code/mprpc/example/callee/friendservice.cc"
+},
+{
+  "directory": "/home/xuanxuan/code/mprpc/build/example/callee",
+  "command": "/usr/bin/g++  -I/home/xuanxuan/code/mprpc/src/include -I/home/xuanxuan/code/mprpc/example -g -std=gnu++17 -o CMakeFiles/provider.dir/__/friend.pb.cc.o -c /home/xuanxuan/code/mprpc/example/friend.pb.cc",
+  "file": "/home/xuanxuan/code/mprpc/example/friend.pb.cc"
+},
+{
+  "directory": "/home/xuanxuan/code/mprpc/build/example/caller",
+  "command": "/usr/bin/g++  -I/home/xuanxuan/code/mprpc/src/include -I/home/xuanxuan/code/mprpc/example -g -std=gnu++17 -o CMakeFiles/consumer.dir/callfriendservice.cc.o -c /home/xuanxuan/code/mprpc/example/caller/callfriendservice.cc",
+  "file": "/home/xuanxuan/code/mprpc/example/caller/callfriendservice.cc"
+},
+{
+  "directory": "/home/xuanxuan/code/mprpc/build/example/caller",
+  "command": "/usr/bin/g++  -I/home/xuanxuan/code/mprpc/src/include -I/home/xuanxuan/code/mprpc/example -g -std=gnu++17 -o CMakeFiles/consumer.dir/__/friend.pb.cc.o -c /home/xuanxuan/code/mprpc/example/friend.pb.cc",
+  "file": "/home/xuanxuan/code/mprpc/example/friend.pb.cc"
+}
+]

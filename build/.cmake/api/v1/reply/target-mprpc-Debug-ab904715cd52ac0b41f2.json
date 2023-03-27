@@ -1,9 +1,8 @@
 {
-	"archive" : {},
 	"artifacts" : 
 	[
 		{
-			"path" : "/home/xuanxuan/code/mprpc/lib/libmprpc.a"
+			"path" : "/home/xuanxuan/code/mprpc/lib/libmprpc.so"
 		}
 	],
 	"backtrace" : 1,
@@ -12,6 +11,8 @@
 		"commands" : 
 		[
 			"add_library",
+			"link_directories",
+			"target_link_libraries",
 			"include_directories"
 		],
 		"files" : 
@@ -36,11 +37,23 @@
 			{
 				"command" : 1,
 				"file" : 1,
+				"line" : 23,
+				"parent" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 16,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 1,
 				"line" : 19,
 				"parent" : 2
 			},
 			{
-				"command" : 1,
+				"command" : 3,
 				"file" : 1,
 				"line" : 20,
 				"parent" : 2
@@ -53,20 +66,26 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g"
+					"fragment" : "-g -fPIC"
 				},
 				{
 					"fragment" : "-std=gnu++17"
 				}
 			],
+			"defines" : 
+			[
+				{
+					"define" : "mprpc_EXPORTS"
+				}
+			],
 			"includes" : 
 			[
 				{
-					"backtrace" : 3,
+					"backtrace" : 5,
 					"path" : "/home/xuanxuan/code/mprpc/src/include"
 				},
 				{
-					"backtrace" : 4,
+					"backtrace" : 6,
 					"path" : "/home/xuanxuan/code/mprpc/example"
 				}
 			],
@@ -93,8 +112,48 @@
 		}
 	],
 	"id" : "mprpc::@145eef247bfb46b6828c",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "-L/home/xuanxuan/code/mprpc/lib",
+				"role" : "libraryPath"
+			},
+			{
+				"fragment" : "-Wl,-rpath,/home/xuanxuan/code/mprpc/lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "-lmuduo_net",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "-lmuduo_base",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "-lpthread",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "-lzookeeper_mt",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
 	"name" : "mprpc",
-	"nameOnDisk" : "libmprpc.a",
+	"nameOnDisk" : "libmprpc.so",
 	"paths" : 
 	{
 		"build" : "src",
@@ -168,5 +227,5 @@
 			"sourceGroupIndex" : 0
 		}
 	],
-	"type" : "STATIC_LIBRARY"
+	"type" : "SHARED_LIBRARY"
 }
