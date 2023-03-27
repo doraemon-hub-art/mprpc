@@ -38,7 +38,5 @@ int main(int argc,char** argv){
         std::cout << controller.ErrorText() << std::endl;
     }
     
-    
-
     return 0;
 }

@@ -2,3 +2,7 @@
 2023-03-27 11:47:46 [ERROR] =>: xiao ke lai
 2023-03-27 11:47:46 [INFO] =>: service_name: FriendServiceRpc
 2023-03-27 11:47:46 [INFO] =>: method_name: GetFriendsList
+2023-03-27 16:26:41 [ERROR] =>: /home/xuanxuan/code/mprpc/example/callee/friendservice.cc:main:46
+2023-03-27 16:26:41 [ERROR] =>: xiao ke lai
+2023-03-27 16:26:41 [INFO] =>: service_name: FriendServiceRpc
+2023-03-27 16:26:41 [INFO] =>: method_name: GetFriendsList
